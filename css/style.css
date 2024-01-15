@@ -8,12 +8,167 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "";
-  src: url("") format("woff2"), url("") format("woff");
+  font-family: "Roboto", sans-serif;
 }
 
 /* ******************************** */
 
 /* Colores */
+:root {
+  --color-azul: #2f327b;
+  --color-azulclaro: #4374a6;
+  --color-blanco: #f0f2f2;
+  --color-gris: #aeb9bf;
+  --color-grisclaro: #d2d6d9;
+  --color-turquesa: #74c7f4;
+}
 
-/* ******************************** */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vw;
+  padding: 5vw;
+  width: 100vw;
+  min-height: 100vh; /* Agregado para ocupar todo el alto */
+  background: linear-gradient(
+    180deg,
+    var(--color-azulclaro) 0%,
+    var(--color-azul) 100%
+  );
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1vh;
+}
+
+.logo {
+  height: 14vw;
+}
+
+.logotexto {
+  color: var(--color-blanco);
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+main {
+  margin-top: 12vh;
+  width: 90vw;
+  height: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra el contenido verticalmente */
+}
+
+.circulo-gris {
+  width: 70vw;
+  height: 70vw;
+  background-color: #cccccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.play {
+  height: 25vw;
+  cursor: pointer;
+}
+
+@keyframes cuentaAtras {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.2);
+  }
+  66% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.6);
+  }
+}
+
+.respirar {
+  animation: respirar 5s infinite alternate;
+}
+
+@keyframes respirar {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+#contador {
+  width: 100%;
+  padding: 4vh 1.5vw;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+  color: var(--color-blanco);
+  font-size: 4vh;
+  display: none; /* Agregado para ocultar el contador */
+}
+
+.botones {
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2vh;
+}
+
+.info,
+.guia {
+  display: inline-flex;
+  padding: 2vh 4vw;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  border-radius: 3vh;
+  background: var(--color-azulclaro);
+  margin: 2vh 0;
+}
+
+footer {
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3vw;
+  color: var(--color-blanco);
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  margin-top: 1vh;
+  font-size: 0.8em;
+}
