@@ -11,22 +11,17 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* ******************************** */
-
 /* Colores */
 :root {
   --color-azul: #2f327b;
   --color-azulclaro: #4374a6;
   --color-blanco: #f0f2f2;
-  --color-gris: #aeb9bf;
-  --color-grisclaro: #d2d6d9;
   --color-turquesa: #74c7f4;
+  --color-grisclaro:#d2d6d9;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+a{
+  text-decoration: none;
 }
 
 body {
@@ -41,12 +36,8 @@ body {
   gap: 5vw;
   padding: 5vw;
   width: 100vw;
-  min-height: 100vh; /* Agregado para ocupar todo el alto */
-  background: linear-gradient(
-    180deg,
-    var(--color-azulclaro) 0%,
-    var(--color-azul) 100%
-  );
+  height: 100vh;
+  background: linear-gradient(180deg, var(--color-azulclaro) 0%, var(--color-azul) 100%);
 }
 
 header {
@@ -71,19 +62,19 @@ header {
 }
 
 main {
-  margin-top: 12vh;
+  margin-top: 6vh;
   width: 90vw;
-  height: 90vw;
+  height: 54vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Centra el contenido verticalmente */
+  justify-content: center;
 }
 
 .circulo-gris {
-  width: 70vw;
-  height: 70vw;
-  background-color: #cccccc;
+  width: 74vw;
+  height: 74vw;
+  background-color: var(--color-grisclaro);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -91,84 +82,69 @@ main {
   position: relative;
 }
 
+.circulo-turquesa {
+  width: 0;
+  height: 0;
+  background-color: var(--color-turquesa);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 1s, height 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .play {
-  height: 25vw;
+  margin-left: 8%;
+  height: 32vw;
   cursor: pointer;
-}
-
-@keyframes cuentaAtras {
-  0% {
-    transform: scale(1);
-  }
-  33% {
-    transform: scale(1.2);
-  }
-  66% {
-    transform: scale(1.4);
-  }
-  100% {
-    transform: scale(1.6);
-  }
-}
-
-.respirar {
-  animation: respirar 5s infinite alternate;
-}
-
-@keyframes respirar {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.2);
-  }
 }
 
 #contador {
   width: 100%;
-  padding: 4vh 1.5vw;
   justify-content: center;
   align-items: center;
-  gap: 2vh;
   color: var(--color-blanco);
   font-size: 4vh;
-  display: none; /* Agregado para ocultar el contador */
+  display: flex;
+  padding-top: 4vh;
 }
 
 .botones {
-  width: 90vw;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 2vh;
+  margin-top: 3vh;
 }
 
 .info,
 .guia {
   display: inline-flex;
-  padding: 2vh 4vw;
+  padding: 2vh 6vw;
   justify-content: center;
   align-items: center;
-  gap: 2vw;
   border-radius: 3vh;
   background: var(--color-azulclaro);
-  margin: 2vh 0;
-}
-
-footer {
-  width: 80vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3vw;
   color: var(--color-blanco);
-  margin-top: auto;
 }
 
-.footer-content {
+footer{
+  margin-left: 16px;
   display: flex;
+  height: 3rem;
+  padding-right: 2px;
   align-items: center;
-  margin-top: 1vh;
-  font-size: 0.8em;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+.footertexto{
+  color: var(--color-blanco);
+  font-family: Roboto;
+  font-size: 1rem;
 }
