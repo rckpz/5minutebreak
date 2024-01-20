@@ -8,7 +8,9 @@
 
 /* Tipografía */
 @font-face {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
+  src: url("../font/roboto-regular-webfont.woff2") format("woff2"),
+    url("../font/roboto-regular-webfont.woff") format("woff");
 }
 
 /* Colores */
@@ -17,10 +19,10 @@
   --color-azulclaro: #4374a6;
   --color-blanco: #f0f2f2;
   --color-turquesa: #74c7f4;
-  --color-grisclaro:#d2d6d9;
+  --color-grisclaro: #d2d6d9;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -37,7 +39,11 @@ body {
   padding: 5vw;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(180deg, var(--color-azulclaro) 0%, var(--color-azul) 100%);
+  background: linear-gradient(
+    180deg,
+    var(--color-azulclaro) 0%,
+    var(--color-azul) 100%
+  );
 }
 
 header {
@@ -123,7 +129,8 @@ main {
 }
 
 .info,
-.guia {
+.guia,
+.back {
   display: inline-flex;
   padding: 2vh 6vw;
   justify-content: center;
@@ -133,7 +140,7 @@ main {
   color: var(--color-blanco);
 }
 
-footer{
+footer {
   margin-left: 16px;
   display: flex;
   height: 3rem;
@@ -143,7 +150,7 @@ footer{
   flex-grow: 1;
 }
 
-.footertexto{
+.footertexto {
   color: var(--color-blanco);
   font-family: Roboto;
   font-size: 1rem;

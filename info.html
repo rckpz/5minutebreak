@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div id="container">
-    <header>
+      <header>
         <div class="logo-container">
-        <img src="/assets/Logo.png" alt="Logo" class="logo" />
-        <p class="logotexto">5MinuteBreak</p>
+          <img src="img/smartphone/Logo.webp" alt="Logo" class="logo" />
+          <h1 class="logotexto">5MinuteBreak</h1>
         </div>
-    </header>
+      </header>
 
-    <main>
-        <img src="/assets/infoimg.png" alt="Información" class="info-image" />
+      <main>
+        <picture class="info-image">
+          <source
+            srcset="
+              img/smartphone/infoimg.webp    1x,
+              img/smartphone/infoimg@2x.webp 2x
+            "
+            media="(min-width:320px) and (orientation:portrait)"
+          />
+          <img src="" alt="Persona Meditando" decoding="async" loading="lazy" />
+        </picture>
         <p>
-            Bienvenido a 5MinuteBreak , tu compañero personal para gestionar el estrés y mejorar tu bienestar mental. Nuestra aplicación se basa en principios respaldados por la ciencia y está diseñada para encajar fácilmente en tu rutina diaria ocupada.
-
-            Nos inspiramos en prácticas comprobadas, como el ejercicio de respiración utilizado por profesionales como los Navy Seals. La técnica, realizada tres veces al día durante 5 minutos, ha demostrado reducir significativamente los niveles de estrés y mejorar la concentración.
-
-            Beneficios Principales:
-            
-            Reducción del Estrés:
-            
-            Practica nuestra técnica de respiración para disminuir los niveles de estrés en cualquier momento y lugar.
-            
-            Mejora del Enfoque:
-            
-            Experimenta una mayor concentración y claridad mental con sesiones cortas pero efectivas.
-            
-            
+          Bienvenido a 5MinuteBreak , tu compañero personal para gestionar el
+          estrés y mejorar tu bienestar mental. Nuestra aplicación se basa en
+          principios respaldados por la ciencia y está diseñada para encajar
+          fácilmente en tu rutina diaria ocupada. Nos inspiramos en prácticas
+          comprobadas, como el ejercicio de respiración utilizado por
+          profesionales como los Navy Seals. La técnica, realizada tres veces al
+          día durante 5 minutos, ha demostrado reducir significativamente los
+          niveles de estrés y mejorar la concentración. Beneficios Principales:
+          Reducción del Estrés: Practica nuestra técnica de respiración para
+          disminuir los niveles de estrés en cualquier momento y lugar. Mejora
+          del Enfoque: Experimenta una mayor concentración y claridad mental con
+          sesiones cortas pero efectivas.
         </p>
-    </main>
-    <section class="botones">
+      </main>
+      <section class="botones">
         <a href="index.html" class="back">BACK</a>
-        <img src="/assets/Sonido.svg" alt="Sonido" />
+        <img src="img/smartphone/Sonido.svg" alt="Sonido" />
         <a href="guia.html" class="guia">GUÍAS</a>
-    </section>
+      </section>
     </div>
-</body>
+  </body>
 </html>

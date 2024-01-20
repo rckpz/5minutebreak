@@ -1,50 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>5MinuteBreak</title>
-  <meta name="description" content="Tu compañero para gestionar el estrés y mejorar el bienestar.">
-  <meta property="og:title" content="5MinuteBreak">
-  <meta property="og:description" content="Tu compañero para gestionar el estrés y mejorar el bienestar.">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="5MinuteBreak">
-  <meta name="twitter:description" content="Tu compañero para gestionar el estrés y mejorar el bienestar.">
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="theme-color" content="#fafafa">
-</head>
-<body>
-  <div id="container">
-    <header>
-      <div class="logo-container">
-        <img src="img/desktop/Logo.png" alt="Logo" class="logo">
-        <p class="logotexto">5MinuteBreak</p>
-      </div>
-    </header>
-
-    <main>
-      <section class="respiracion">
-        <div class="circulo-gris" id="circulo-gris">
-          <div class="circulo-turquesa" id="circulo-turquesa">
-          </div>
-          <img src="img/desktop/Play.svg" class="play" alt="Play" id="play-btn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>5MinuteBreak</title>
+    <meta
+      name="description"
+      content="Tu compañero para gestionar el estrés y mejorar el bienestar."
+    />
+    <meta property="og:title" content="5MinuteBreak" />
+    <meta
+      property="og:description"
+      content="Tu compañero para gestionar el estrés y mejorar el bienestar."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="5MinuteBreak" />
+    <meta
+      name="twitter:description"
+      content="Tu compañero para gestionar el estrés y mejorar el bienestar."
+    />
+    <!-- App Web, inidicar al navegador que elementos mostrar en un JSON -->
+    <link rel="manifest" href="site.webmanifest" />
+    <!-- icono de acceso para IOS -->
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Recordar que favicon.ico tiene que estar en el directorio inicial -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+    <script src="preloader.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <div class="logo-container">
+          <img src="img/smartphone/Logo.webp" alt="Logo" class="logo" />
+          <h1 class="logotexto">5MinuteBreak </h1>
         </div>
-        <div id="contador">­</div>
-      </section>
-      <section class="botones">
-        <a href="info.html" class="info">INFO</a>
-        <img src="img/desktop/Sonido.svg" alt="Sonido">
-        <a href="guia.html" class="guia">GUÍAS</a>
-      </section>
-    </main>
+      </header>
 
-    <footer>
-      <img src="img/desktop/corazon.svg" class="corazon" alt="Corazón">
-      <p class="footertexto">Realiza este ejercicio 3 veces al día para mantener una vida saludable</p>
-    </footer>
-  </div>
-  <script src="js/script.js"></script>
-  <script src="preloader.js"></script>
-</body>
+      <main>
+        <section class="respiracion">
+          <div class="circulo-gris" id="circulo-gris">
+            <div class="circulo-turquesa" id="circulo-turquesa"></div>
+            <img
+              src="img/smartphone/Play.svg"
+              class="play"
+              alt="Play"
+              id="play-btn"
+            />
+          </div>
+          <div id="contador">­</div>
+        </section>
+        <section class="botones">
+          <a href="info.html" class="info">INFO</a>
+          <img src="img/smartphone/Sonido.svg" alt="Sonido" />
+          <a href="guia.html" class="guia">GUÍAS</a>
+        </section>
+      </main>
+
+      <footer>
+        <img src="img/smartphone/corazon.svg" class="corazon" alt="Corazón" />
+        <p class="footertexto">
+          Realiza este ejercicio 3 veces al día para mantener una vida saludable
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>
