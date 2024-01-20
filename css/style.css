@@ -22,10 +22,12 @@
   --color-grisclaro: #d2d6d9;
 }
 
+/* Enlaces */
 a {
   text-decoration: none;
 }
 
+/* Cuerpo de la página */
 body {
   font-family: "Roboto", sans-serif;
   color: var(--color-blanco);
@@ -34,8 +36,9 @@ body {
     var(--color-azulclaro) 0%,
     var(--color-azul) 100%
   );
+  margin: 0;
 }
-
+/* Contenedor principal */
 #container {
   display: flex;
   flex-direction: column;
@@ -45,26 +48,31 @@ body {
   width: 100vw;
 }
 
+/* Encabezado */
 header {
   display: flex;
   align-items: center;
 }
 
+/* Contenedor del logo */
 .logo-container {
   display: flex;
   align-items: center;
   margin-top: 1vh;
 }
 
+/* Logo */
 .logo {
   height: 14vw;
 }
 
+/* Texto del logo */
 .logotexto {
   font-size: 1.6em;
   font-weight: bold;
 }
 
+/* Contenido principal */
 main {
   margin-top: 6vh;
   width: 90vw;
@@ -75,6 +83,7 @@ main {
   justify-content: center;
 }
 
+/* Circulo de respiración */
 .circulo-gris {
   width: 74vw;
   height: 74vw;
@@ -86,6 +95,7 @@ main {
   position: relative;
 }
 
+/* Animación del círculo turquesa */
 .circulo-turquesa {
   width: 0;
   height: 0;
@@ -101,12 +111,14 @@ main {
   align-items: center;
 }
 
+/* Botón de reproducción */
 .play {
   margin-left: 8%;
   height: 32vw;
   cursor: pointer;
 }
 
+/* Contador */
 #contador {
   width: 100%;
   justify-content: center;
@@ -116,6 +128,7 @@ main {
   padding-top: 4vh;
 }
 
+/* Sección de botones */
 .botones {
   width: 100vw;
   display: flex;
@@ -125,6 +138,7 @@ main {
   margin-top: 3vh;
 }
 
+/* Estilo de botones */
 .info,
 .guia,
 .back {
@@ -137,6 +151,7 @@ main {
   color: var(--color-blanco);
 }
 
+/* Pie de página */
 footer {
   margin-left: 16px;
   display: flex;
@@ -147,28 +162,40 @@ footer {
   flex-grow: 1;
 }
 
+/* Estilo de imagen en la sección de información */
 .infoimage img {
   margin: 24px 0px;
 }
-.paginatexto{
+
+/* Estilo de la sección de texto de la página */
+.paginatexto {
   text-align: justify;
 }
-.paginatexto h2{
+
+/* Estilo de títulos en la sección de texto */
+.paginatexto h2 {
   margin-bottom: 16px;
 }
+
+/* Estilo de párrafos en la sección de texto */
 .paginatexto p {
   margin-top: 16px;
   margin-bottom: 16px;
 }
+
+/* Estilo de elementos destacados en la sección de texto */
 .paginatexto span {
   margin-bottom: 16px;
   font-weight: bold;
   font-size: 18px;
 }
+
+/* Estilo de hover para el botón de sonido */
 #sonido-img:hover {
   cursor: pointer;
 }
 
+/* Estilo de botón de sonido activado */
 #sonido-img[src="img/smartphone/Sonidoa.svg"] {
   filter: brightness(1.5); /* O cualquier otro estilo para indicar activado */
 }

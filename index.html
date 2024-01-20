@@ -29,50 +29,60 @@
     <script src="js/script.js"></script>
     <script src="preloader.js"></script>
   </head>
-  <body>
-    <div id="container">
-      <header>
-        <div class="logo-container">
+ <body>
+  <div id="container">
+    <header>
+      <div class="logo-container">
+        <!-- Logo con redirección al index -->
+        <img
+          src="img/smartphone/Logo.webp"
+          alt="Logo"
+          class="logo"
+          onclick="window.location.href = 'index.html';"
+        />
+        <!-- Texto del logo con redirección al index -->
+        <h1 class="logotexto" onclick="window.location.href = 'index.html';">
+          5MinuteBreak
+        </h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="respiracion">
+        <div class="circulo-gris" id="circulo-gris">
+          <!-- Elemento turquesa para la animación -->
+          <div class="circulo-turquesa" id="circulo-turquesa"></div>
+          <!-- Botón de reproducción y animación -->
           <img
-            src="img/smartphone/Logo.webp"
-            alt="Logo"
-            class="logo"
-            onclick="window.location.href = 'index.html';"
+            src="img/smartphone/Play.svg"
+            class="play"
+            alt="Play"
+            id="play-btn"
           />
-
-          <h1 class="logotexto" onclick="window.location.href = 'index.html';">
-            5MinuteBreak
-          </h1>
         </div>
-      </header>
+        <!-- Contador de tiempo -->
+        <div id="contador">­</div>
+      </section>
+      <section class="botones">
+        <!-- Enlaces a páginas adicionales -->
+        <a href="info.html" class="info">INFO</a>
+        <!-- Botón de sonido y control de audio -->
+        <img src="img/smartphone/Sonido.svg" alt="Sonido" id="sonido-img" />
+        <audio id="fondo-audio" src="midnight-forest-184304.mp3" loop></audio>
+        <!-- Enlace a la guía -->
+        <a href="guia.html" class="guia">GUÍAS</a>
+      </section>
+    </main>
 
-      <main>
-        <section class="respiracion">
-          <div class="circulo-gris" id="circulo-gris">
-            <div class="circulo-turquesa" id="circulo-turquesa"></div>
-            <img
-              src="img/smartphone/Play.svg"
-              class="play"
-              alt="Play"
-              id="play-btn"
-            />
-          </div>
-          <div id="contador">­</div>
-        </section>
-        <section class="botones">
-          <a href="info.html" class="info">INFO</a>
-          <img src="img/smartphone/Sonido.svg" alt="Sonido" id="sonido-img" />
-          <audio id="fondo-audio" src="midnight-forest-184304.mp3" loop></audio>
-          <a href="guia.html" class="guia">GUÍAS</a>
-        </section>
-      </main>
+    <footer>
+      <!-- Icono de corazón en el pie de página -->
+      <img src="img/smartphone/corazon.svg" class="corazon" alt="Corazón" />
+      <!-- Texto en el pie de página -->
+      <p class="footertexto">
+        Realiza este ejercicio 3 veces al día para mantener una vida saludable
+      </p>
+    </footer>
+  </div>
+</body>
 
-      <footer>
-        <img src="img/smartphone/corazon.svg" class="corazon" alt="Corazón" />
-        <p class="footertexto">
-          Realiza este ejercicio 3 veces al día para mantener una vida saludable
-        </p>
-      </footer>
-    </div>
-  </body>
 </html>

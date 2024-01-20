@@ -29,23 +29,26 @@
     <script src="js/script.js"></script>
     <script src="preloader.js"></script>
   </head>
+
   <body>
     <div id="container">
       <header>
         <div class="logo-container">
+          <!-- Logo con redirección al index -->
           <img
             src="img/smartphone/Logo.webp"
             alt="Logo"
             class="logo"
             onclick="window.location.href = 'index.html';"
           />
-
+          <!-- Texto del logo con redirección al index -->
           <h1 class="logotexto" onclick="window.location.href = 'index.html';">
             5MinuteBreak
           </h1>
         </div>
       </header>
       <section class="paginatexto">
+        <!-- Imagen de información responsiva -->
         <picture class="infoimage">
           <source
             srcset="
@@ -56,59 +59,64 @@
           />
           <img src="" alt="Persona Meditando" decoding="async" loading="lazy" />
         </picture>
+        <!-- Párrafos de texto informativo -->
         <p>
           Bienvenido a <span>5MinuteBreak</span>, tu compañero personal para
-          gestionar el estrés y mejorar tu bienestar mental. Nuestra aplicación
-          se basa en principios respaldados por la ciencia y está diseñada para
+          gestionar el estrés y mejorar tu bienestar mental. Nuestra aplicación se
+          basa en principios respaldados por la ciencia y está diseñada para
           encajar fácilmente en tu rutina diaria ocupada.
         </p>
-
+  
         <p>
           Nos inspiramos en prácticas comprobadas, como el ejercicio de
-          respiración utilizado por profesionales como los Navy Seals. La
-          técnica, realizada tres veces al día durante 5 minutos, ha demostrado
-          reducir significativamente los niveles de estrés y mejorar la
-          concentración.
+          respiración utilizado por profesionales como los Navy Seals. La técnica,
+          realizada tres veces al día durante 5 minutos, ha demostrado reducir
+          significativamente los niveles de estrés y mejorar la concentración.
         </p>
-
+  
         <h2>Beneficios Principales:</h2>
-
+        <!-- Lista de beneficios -->
         <span>Reducción del Estrés:</span>
         <p>
           Practica nuestra técnica de respiración para disminuir los niveles de
           estrés en cualquier momento y lugar.
         </p>
-
+  
         <span>Mejora del Enfoque:</span>
         <p>
           Experimenta una mayor concentración y claridad mental con sesiones
           cortas pero efectivas.
         </p>
-
+  
         <span>Relajación Instantánea:</span>
         <p>
-          Aprende técnicas rápidas para relajarte al instante y liberar la
-          tensión acumulada.
+          Aprende técnicas rápidas para relajarte al instante y liberar la tensión
+          acumulada.
         </p>
-
+  
         <span>Mejora del Sueño:</span>
         <p>
           Incorpora rutinas de relajación antes de dormir para promover un sueño
           más reparador.
         </p>
-
+  
         <span>Mayor Energía:</span>
         <p>
-          Recarga tu energía mental y física con breves descansos que
-          revitalizan tu día.
+          Recarga tu energía mental y física con breves descansos que revitalizan
+          tu día.
         </p>
       </section>
       <section class="botones">
+        <!-- Enlace de regreso al index -->
         <a href="index.html" class="back">BACK</a>
+        <!-- Botón de sonido y control de audio -->
         <img src="img/smartphone/Sonido.svg" alt="Sonido" id="sonido-img" />
         <audio id="fondo-audio" src="midnight-forest-184304.mp3" loop></audio>
+        <!-- Enlace a la guía -->
         <a href="guia.html" class="guia">GUÍAS</a>
       </section>
     </div>
   </body>
+  
+
 </html>
