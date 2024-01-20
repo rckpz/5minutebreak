@@ -28,7 +28,12 @@ a {
 
 body {
   font-family: "Roboto", sans-serif;
-  margin: 0;
+  color: var(--color-blanco);
+  background: linear-gradient(
+    180deg,
+    var(--color-azulclaro) 0%,
+    var(--color-azul) 100%
+  );
 }
 
 #container {
@@ -38,12 +43,6 @@ body {
   gap: 5vw;
   padding: 5vw;
   width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-    180deg,
-    var(--color-azulclaro) 0%,
-    var(--color-azul) 100%
-  );
 }
 
 header {
@@ -62,7 +61,6 @@ header {
 }
 
 .logotexto {
-  color: var(--color-blanco);
   font-size: 1.6em;
   font-weight: bold;
 }
@@ -70,7 +68,7 @@ header {
 main {
   margin-top: 6vh;
   width: 90vw;
-  height: 54vh;
+  margin-bottom: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,7 +111,6 @@ main {
   width: 100%;
   justify-content: center;
   align-items: center;
-  color: var(--color-blanco);
   font-size: 4vh;
   display: flex;
   padding-top: 4vh;
@@ -150,8 +147,28 @@ footer {
   flex-grow: 1;
 }
 
-.footertexto {
-  color: var(--color-blanco);
-  font-family: Roboto;
-  font-size: 1rem;
+.infoimage img {
+  margin: 24px 0px;
+}
+.paginatexto{
+  text-align: justify;
+}
+.paginatexto h2{
+  margin-bottom: 16px;
+}
+.paginatexto p {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.paginatexto span {
+  margin-bottom: 16px;
+  font-weight: bold;
+  font-size: 18px;
+}
+#sonido-img:hover {
+  cursor: pointer;
+}
+
+#sonido-img[src="img/smartphone/Sonidoa.svg"] {
+  filter: brightness(1.5); /* O cualquier otro estilo para indicar activado */
 }

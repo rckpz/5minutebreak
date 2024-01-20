@@ -4,6 +4,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const breathText = document.getElementById("breath-text");
   const contador = document.getElementById("contador");
 
+  const sonidoImg = document.getElementById("sonido-img");
+  const fondoAudio = document.getElementById("fondo-audio");
+  let contadorInterval; // Declarar el intervalo fuera de la función para que sea accesible en otras funciones
+  let animacionInterval; // Declarar el intervalo para la animación
+
+  sonidoImg.addEventListener("click", () => {
+    if (fondoAudio.paused) {
+      fondoAudio.play();
+      sonidoImg.src = "img/smartphone/Sonidoa.svg";
+    } else {
+      fondoAudio.pause();
+      sonidoImg.src = "img/smartphone/Sonido.svg";
+    }
+  });
+
+  // Restaurar el estado del audio desde localStorage
+  const audioState = localStorage.getItem("audioState");
+  if (audioState === "playing") {
+    fondoAudio.play();
+    fondoAudio.volume = 0.5;
+    sonidoImg.src = "img/smartphone/Sonidoa.svg";
+  }
+
+  // Guardar el estado del audio antes de descargar la página
+  window.addEventListener("beforeunload", () => {
+    if (!fondoAudio.paused) {
+      localStorage.setItem("audioState", "playing");
+    } else {
+      localStorage.setItem("audioState", "paused");
+    }
+  });
+
   playBtn.addEventListener("click", iniciarCuentaAtras);
 
   function iniciarCuentaAtras() {
@@ -38,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function iniciarContador() {
     let tiempoRestante = 5 * 60;
 
-    const contadorInterval = setInterval(() => {
+    contadorInterval = setInterval(() => {
       if (tiempoRestante > 0) {
         const minutos = Math.floor(tiempoRestante / 60);
         const segundos = tiempoRestante % 60;
@@ -50,6 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
         tiempoRestante--;
       } else {
         clearInterval(contadorInterval);
+        clearInterval(animacionInterval); // Detener la animación
+        mostrarFelicitacion();
       }
     }, 1000);
   }
@@ -64,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
     breathText.classList.add("breath-text"); // Agrega una clase para aplicar estilos
     circuloTurquesa.appendChild(breathText);
 
-    const crecimientoInterval = setInterval(() => {
+    animacionInterval = setInterval(() => {
       if (fase === "crecimiento") {
         // Fase de crecimiento
         if (porcentaje < 86) {
@@ -100,6 +134,15 @@ document.addEventListener("DOMContentLoaded", () => {
           }, 4000);
         }
       }
-    }, 150); // El intervalo se ejecuta aproximadamente cada 100 milisegundos
+    }, 150); // El intervalo se ejecuta aproximadamente cada 150 milisegundos
+  }
+
+  function mostrarFelicitacion() {
+    // Detener cualquier animación o acción en curso
+    clearInterval(animacionInterval); // Detener la animación
+    circuloTurquesa.innerHTML = ""; // Limpiar contenido
+
+    // Reemplazar el contenido del contador con el mensaje de felicitación
+    contador.innerText = "¡Felicidades!";
   }
 });

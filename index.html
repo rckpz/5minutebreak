@@ -33,8 +33,16 @@
     <div id="container">
       <header>
         <div class="logo-container">
-          <img src="img/smartphone/Logo.webp" alt="Logo" class="logo" />
-          <h1 class="logotexto">5MinuteBreak </h1>
+          <img
+            src="img/smartphone/Logo.webp"
+            alt="Logo"
+            class="logo"
+            onclick="window.location.href = 'index.html';"
+          />
+
+          <h1 class="logotexto" onclick="window.location.href = 'index.html';">
+            5MinuteBreak
+          </h1>
         </div>
       </header>
 
@@ -53,7 +61,8 @@
         </section>
         <section class="botones">
           <a href="info.html" class="info">INFO</a>
-          <img src="img/smartphone/Sonido.svg" alt="Sonido" />
+          <img src="img/smartphone/Sonido.svg" alt="Sonido" id="sonido-img" />
+          <audio id="fondo-audio" src="midnight-forest-184304.mp3" loop></audio>
           <a href="guia.html" class="guia">GUÍAS</a>
         </section>
       </main>
